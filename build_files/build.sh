@@ -10,7 +10,14 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+## Install dev tools
+dnf5 install @development-tools
+
+## Install minibook
+git clone https://github.com/petitstrawberry/minibook-support.git
+cd minibook-support && make && sudo make install
+cd ..
+rm minibook-support
 
 # Use a COPR Example:
 #
