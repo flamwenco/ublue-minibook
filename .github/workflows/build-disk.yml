@@ -20,11 +20,11 @@ on:
       - main
     paths:
       - './disk_config/disk.toml'
-      - './disk_config/iso.toml'
+      - './disk_config/iso-kde.toml'
       - './.github/workflows/build-disk.yml'
 
 env:
-  IMAGE_NAME: "bazzite-minibook" # output of build.yml, keep in sync
+  IMAGE_NAME: ${{ github.event.repository.name }} # output of build.yml, keep in sync
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
   DEFAULT_TAG: "latest"
   BIB_IMAGE: "ghcr.io/osbuild/bootc-image-builder:latest" # "quay.io/centos-bootc/bootc-image-builder:latest" - see https://github.com/osbuild/bootc-image-builder/pull/954
