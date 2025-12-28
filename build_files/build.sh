@@ -17,7 +17,7 @@ dnf5 -y install @development-tools
 git clone https://github.com/petitstrawberry/minibook-support.git
 cd minibook-support && make && make install
 cd ..
-rm minibook-support
+rm -rf minibook-support
 
 # Use a COPR Example:
 #
