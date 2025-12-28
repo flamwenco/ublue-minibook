@@ -15,7 +15,7 @@ dnf5 -y install @development-tools
 
 ## Install minibook
 git clone https://github.com/petitstrawberry/minibook-support.git
-cd minibook-support && make && sudo make install
+cd minibook-support && make && make install
 cd ..
 rm minibook-support
 
