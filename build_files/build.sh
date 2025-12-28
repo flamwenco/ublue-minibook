@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 ## Install dev tools
-dnf5 install @development-tools
+dnf5 -y install @development-tools
 
 ## Install minibook
 git clone https://github.com/petitstrawberry/minibook-support.git
